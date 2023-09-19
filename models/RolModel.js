@@ -3,7 +3,7 @@ import RolesSche from '../schemas/Rol.js'
 export default class RolModel{
 
     static async getAll(){
-        const allData = await RolesSche.find({id:1})
+        const allData = await RolesSche.find()
         return allData
     }
 

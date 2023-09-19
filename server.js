@@ -1,4 +1,5 @@
 import express from 'express'
+import 'dotenv/config'
 import {conectar} from './mongoDB.js'
 import {EmpleadosRouter} from './routes/empleados.js'
 import {RolesRouter} from './routes/roles.js'
@@ -10,6 +11,8 @@ import { CompraRouter } from './routes/compras.js'
 import { PedidoVentaRouter } from './routes/pedidoVenta.js'
 
 
+
+const port = process.env.PORT || 3000;
 const app = express()
 conectar()
 console.log("AB")
@@ -34,6 +37,6 @@ app.use((req,res)=>{
     res.status(400).send('<h1>No podeis ingresara esta página pa</h1>')
 })
 
-app.listen(3000,"0.0.0.0", ()=>{
-    console.log('Port 3000')
+app.listen(port,"0.0.0.0", ()=>{
+    console.log(`Port ${port}`)
 })

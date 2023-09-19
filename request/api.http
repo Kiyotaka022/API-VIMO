@@ -1,6 +1,6 @@
 ###POST pa
 
-GET http://localhost:3000/pedidoVenta
+GET https://api-vimo-production.up.railway.app/productos
 Content-Type: application/json
 
 {

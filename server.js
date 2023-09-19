@@ -12,7 +12,7 @@ import { PedidoVentaRouter } from './routes/pedidoVenta.js'
 
 const app = express()
 conectar()
-
+console.log("AB")
 app.disable('x-powered-by')
 app.use(express.json())
 
@@ -34,6 +34,6 @@ app.use((req,res)=>{
     res.status(400).send('<h1>No podeis ingresara esta página pa</h1>')
 })
 
-app.listen(3000, ()=>{
+app.listen(3000,"0.0.0.0", ()=>{
     console.log('Port 3000')
 })

@@ -1,0 +1,71 @@
+###POST pa
+
+GET http://localhost:3000/pedidoVenta
+Content-Type: application/json
+
+{
+  "concepto":"venta"
+  }
+
+####
+GET http://localhost:3000/productos
+Content-Type: application/json
+####
+POST http://localhost:3000/pedidoVenta 
+Content-Type: application/json
+
+{
+    "id": 8745653,
+    "fecha": "2022-12-09T05:00:00.000Z",
+    "estado":true,
+    "concepto":"venta",
+    "cedulaEmpleado":123456,
+    "cedulaCliente":789,
+    "montoAdeudado":0,
+    "valorTotal": 5000,
+    "detalleVentaPedido": [
+      {
+        "id": 500,
+        "tallas": {
+          "XL": 1,
+          "S": 50,
+          "L": 50,
+          "M": 1,
+          "XXL": 98
+        },
+        "cantidad":"5",
+        "valorUnitario":500
+      }
+    ]
+  }
+
+####
+
+POST http://localhost:3000/pedidoVenta 
+Content-Type: application/json
+
+{
+    "id": 680,
+    "fecha": "2022-12-09T05:00:00.000Z",
+    "estado":true,
+    "concepto":"pedido",
+    "cedulaEmpleado":123456,
+    "cedulaCliente":789,
+    "montoAdeudado":5000,
+    "valorTotal": 5000,
+    "detalleVentaPedido": [
+      {
+        "id": 10,
+        "tallas": {
+          "XL": 0,
+          "S": 0,
+          "L": 0,
+          "M": 0,
+          "XXL": 0
+        },
+        "cantidad":"5",
+        "valorUnitario":500
+      }
+    ]
+  }
+

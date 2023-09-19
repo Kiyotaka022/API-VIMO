@@ -17,7 +17,7 @@ function convertDocument(document){
 
 export default class VentaModel{
 
-    static async getAll(concepto){
+    static async getAll({concepto}){
         let allData
         if(concepto==="pedido"){
              allData = await VentaPedidoSchema.find({concepto:"pedido"})

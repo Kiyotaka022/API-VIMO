@@ -2,8 +2,13 @@ import PedidoVentaModel from '../models/PedidoVentaModel.js'
 
 export class PedidoVentaController{
 
-    static async getAll(req, res){
-        const allData = await PedidoVentaModel.getAll(req.body.concepto)
+    static async getAllPedidos(req, res){
+        const allData = await PedidoVentaModel.getAll({concepto:"pedido"})
+        res.json(allData)
+    }
+
+    static async getAllVentas(req, res){
+        const allData = await PedidoVentaModel.getAll({concepto:"venta"})
         res.json(allData)
     }
 

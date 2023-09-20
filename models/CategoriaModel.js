@@ -4,13 +4,13 @@ export default class CategoriaModel{
 
     static async getAll(){
         const allData = await CategoriaSche.find()
-        return allData
+        return {allData}
     }
 
     
     static async getOne(id){
         const  one = await CategoriaSche.findOne({id:id})
-        return one
+        return {one}
     }
 
     static async create(data){

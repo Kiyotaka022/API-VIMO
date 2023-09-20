@@ -1,11 +1,12 @@
 ###POST pa
 
-GET http://localhost:3001/pedidoVenta/pedidos
+POST  http://localhost:3001/categorias
 Content-Type: application/json
 
 {
-  "concepto":"venta"
-  }
+  "id":5,
+  "nombre":"Niño"
+}
 
 ####
 GET http://localhost:3000/productos

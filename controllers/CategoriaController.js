@@ -16,6 +16,7 @@ export class CategoriaController{
     }
 
     static async create(req, res){
+        console.log(req.body)
         const createRes = await CategoriaModel.create(req.body)
         if(!createRes){
            return res.status(404).json({message:"Esta categoria ya existe en la base dee datos"})

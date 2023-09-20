@@ -3,13 +3,13 @@ import EmpleadoSche from '../schemas/Empleado.js'
 export default class EmpleadoModel{
 
     static async getAll(){
-        const allEmple = await EmpleadoSche.find()
-        return allEmple
+        const allData = await EmpleadoSche.find()
+        return {allData}
     }
 
     static async getOne(id){
         const  one = await EmpleadoSche.findOne({cedula:id})
-        return one
+        return {one}
     }
 
     static async create(data){

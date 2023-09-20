@@ -1,5 +1,6 @@
 import express from 'express'
 import 'dotenv/config'
+import cors from 'cors'
 import {conectar} from './mongoDB.js'
 import {EmpleadosRouter} from './routes/empleados.js'
 import {RolesRouter} from './routes/roles.js'
@@ -18,6 +19,7 @@ conectar()
 console.log("AB")
 app.disable('x-powered-by')
 app.use(express.json())
+app.use(cors())
 
 
 

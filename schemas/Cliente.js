@@ -21,7 +21,7 @@ const ClienteSchema = new Schema({
         unique: false,
         require: [true, 'El campo apellidos es requerido']
     }, fechaNacimiento: {
-        type: Date,
+        type: String,
         unique: false,
         require: [true, 'El campo nacimiento es requerido']
     }, direccion: {

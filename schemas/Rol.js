@@ -13,10 +13,10 @@ const RolSchema = new Schema({
         type: String,
         unique: true,
         require: [true, 'El campo nombres es requerido']
-}}, modulos:{
+}, modulos:{
         type: Object,
         unique: false,
         require: [true, 'El campo nombres es requerido']
-},{versionKey:false})
+}},{versionKey:false})
 
 export default model('rol', RolSchema)

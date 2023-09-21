@@ -12,6 +12,11 @@ export default class RolModel{
         return {one}
     }
 
+    static async getOneByName(id){
+        const  one = await RolesSche.findOne({nombre:nombre})
+        return {one}
+    }
+
     static async create(data){
         let createRes=null
         try{

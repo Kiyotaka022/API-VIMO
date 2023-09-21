@@ -1,6 +1,6 @@
 ###POST pa
 
-POST  http://localhost:3001/categorias
+GET  http://localhost:3001/categorias
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 
 ####
-GET http://localhost:3000/productos
+GET http://localhost:3001/productos
 Content-Type: application/json
 ####
 POST http://localhost:3000/pedidoVenta 

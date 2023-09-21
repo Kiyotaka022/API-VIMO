@@ -4,12 +4,12 @@ export default class RolModel{
 
     static async getAll(){
         const allData = await RolesSche.find()
-        return allData
+        return {allData}
     }
 
     static async getOne(id){
         const  one = await RolesSche.findOne({id:id})
-        return one
+        return {one}
     }
 
     static async create(data){

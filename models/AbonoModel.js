@@ -6,12 +6,12 @@ export default class AbonoModel{
 
     static async getAll(){
         const allData = await AbonoSche.find()
-        return allData
+        return {allData}
     }
 
     static async getOne(id){
         const  one = await AbonoSche.findOne({id:id})
-        return one
+        return {one}
     }
 
 

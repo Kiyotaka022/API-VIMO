@@ -32,7 +32,6 @@ export default class AbonoModel{
         try{
             const Abono = new AbonoSche(data)
             createRes= await Abono.save()
-            this.checkValor(data.idVentaPedido)
         } catch(err){
           /*  if(err.code===11000){
                 const duplicate = Object.keys(err.keyPattern)[0]

@@ -25,12 +25,12 @@ export default class VentaModel{
         }else{
              allData = await VentaPedidoSchema.find({concepto:"venta"})
         }
-        return {allData}
+        return allData
     }
 
     static async getOne(id){
         const  one = await VentaPedidoSchema.findOne({id:id})
-        return {one}
+        return one
     }
 
     static async create(data){

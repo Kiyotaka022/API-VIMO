@@ -1,11 +1,13 @@
 ###POST pa
 
-GET  http://localhost:3001/categorias
+POST  http://localhost:3001/abonos
 Content-Type: application/json
 
 {
-  "id":5,
-  "nombre":"Niño"
+      "id": 55555,
+      "valorAbonado": 5456465,
+      "fecha": "2022-05-05T00:00:00.000Z",
+      "idVentaPedido": 54
 }
 
 ####

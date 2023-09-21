@@ -37,7 +37,7 @@ export default class ProductoModel{
         if(onee===null){
             return null
         }
-        let one = convertDocument([one])
+        let one = convertDocument([onee])
         return {one}
     }
     

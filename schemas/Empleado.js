@@ -28,6 +28,11 @@ const EmpleadoSchema = new Schema({
         type: String,
         unique: false,
         require: [true, 'El campo direccion es requerido']
+    }, correo:{
+        type: String,
+        unique: false,
+        require: [true, 'El campo nombres es requerido']
+
     }
 },{versionKey:false})
 

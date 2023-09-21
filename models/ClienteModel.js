@@ -3,13 +3,13 @@ import ClienteSche from '../schemas/Cliente.js'
 export default class EmpleadoModel{
 
     static async getAll(){
-        const allEmple = await ClienteSche.find()
-        return allEmple
+        const allData = await ClienteSche.find()
+        return {allData}
     }
 
     static async getOne(id){
         const  one = await ClienteSche.findOne({cedula:id})
-        return one
+        return {one}
     }
 
     static async create(data){

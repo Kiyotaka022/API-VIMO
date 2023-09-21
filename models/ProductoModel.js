@@ -26,19 +26,19 @@ function convertDocument(document){
 export default class ProductoModel{
 
     static async getAll(){
-        const allDataa = await ProductoSche.find().populate('categorias')
-        let allData = convertDocument(allDataa)
+        const allData = await ProductoSche.find().populate('categorias')
+        let allDataObject = convertDocument(allData)
 
-        return {allData}
+        return allDataObject
     }
 
     static async getOne(id){
-        const  onee = await ProductoSche.findOne({id:id}).populate('categorias')
-        if(onee===null){
+        const  one = await ProductoSche.findOne({id:id}).populate('categorias')
+        if(one===null){
             return null
         }
-        let one = convertDocument([onee])
-        return {one}
+        let oneObject = convertDocument([one])
+        return oneObject
     }
     
     static async create(data){

@@ -17,9 +17,6 @@ export class AbonoController{
 
     static async create(req, res){
         const createRes = await AbonoModel.create(req.body)
-        if(!createRes){
-           return res.status(404).json({message:"El id de este abono ya existe en la base de datos"})
-        }
         res.json(createRes)
     }
 

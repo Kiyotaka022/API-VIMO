@@ -1,13 +1,13 @@
 ###POST pa
 
-POST  http://localhost:3001/abonos
+POST  https://api-vimo-production.up.railway.app/abonos
 Content-Type: application/json
 
 {
-      "id": 55555,
+      "id": 40,
       "valorAbonado": 5456465,
       "fecha": "2022-05-05T00:00:00.000Z",
-      "idVentaPedido": 54
+      "idVentaPedido": 53
 }
 
 ####

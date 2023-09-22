@@ -37,7 +37,7 @@ export default class AbonoModel{
                 const duplicate = Object.keys(err.keyPattern)[0]
                 createRes={message:`El siguiente campo ya existe en la base de datos: ${duplicate}`}
             }*/
-            return false
+            return err
         }
         return createRes
     }

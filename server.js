@@ -36,7 +36,7 @@ app.use('/pedidoVenta', PedidoVentaRouter)
 
 
 app.use((req,res)=>{
-    res.status(400).send('<h1>Rutas: /empleados, /roles, /clientes, /categorias, /productos, /abonos, /compras, /pedidoVenta</h1>')
+    res.status(400).send('<h1>Rutas: /empleados, /roles, /clientes, /categorias, /productos, /abonos, /compras, /pedidoVenta/pedidos, /pedidoVenta/ventas</h1>')
 })
 
 app.listen(port,"0.0.0.0", ()=>{
